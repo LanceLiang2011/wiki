@@ -12,7 +12,7 @@ export class AppComponent {
   constructor (private wikipediaService: WikipediaService) {}
   handleSubmitEvent(term: string) {
     this.wikipediaService.search(term).subscribe((response) => {
-      this.pages = response.query.search;
+      this.pages = response;
     });
   }
 }
